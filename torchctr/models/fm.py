@@ -21,6 +21,9 @@ class FactorizationMachineLayer(torch.nn.Module):
 
 
 class FactorizationMachine(torch.nn.Module):
+    """
+    FactorizationMachine Model
+    """
     def __init__(self, feature_dims, embed_dim):
         super().__init__()
         self.embedding = EmbeddingLayer(feature_dims, embed_dim)

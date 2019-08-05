@@ -8,7 +8,6 @@ from torchctr.layers import LinearLayer
 class LogisticRegression(torch.nn.Module):
     """
     Simple LR with sigmoid or not
-
     """
 
     def __init__(self, feature_dims):

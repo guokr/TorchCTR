@@ -33,5 +33,3 @@ class MovieLens(BaseDataset):
         self.x = self.data[self.x_columns].to_numpy().astype(np.int)
         self.y = self.data[self.y_column].to_numpy().astype(np.float32)
         self.feature_dims = np.max(self.x, axis=0)
-
-        return (self.x, self.y)

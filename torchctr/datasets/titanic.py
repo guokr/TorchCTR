@@ -3,28 +3,28 @@
 
 import numpy as np
 import pandas as pd
-from torch.utils.data import Dataset
+from .base import BaseDataset
 
-class Titanic(Dataset):
+class Titanic(BaseDataset):
     def __init__(self):
         None
 
-    def load_data(self):
-        data = pd.read_csv("~/.torchctr/titanic/titanic_train.txt", sep="\t", header=None, engine="python")
-        data = data.to_numpy()
+    def build_data(self):
+        self.data = pd.read_csv("~/.torchctr/titanic/titanic_train.txt", sep="\t", header=None, engine="python")
 
-        self.x = data[:, 1:].astype(np.float32)
-        self.y = data[:, 1].astype(np.float32)
-        # self.f = np.max(self.x, axis=0)
-        return (self.x, self.y)
+        non_categorical = ["I{}".format(_) for _ in range(1, 3)]
+        categorical = ["C{}".format(_) for _ in range(1, 13)]
 
-    def __len__(self):
-        return self.y.shape[0]
+        self.y_column = "click"
+        self.x_columns = categorical + non_categorical
+        self.data.columns = [self.y_column] + self.x_columns
 
-    def __getitem__(self, idx):
-        return self.x[idx], self.y[idx]
+        self.preprocess_x(non_categorical=non_categorical)
 
-    def preprocess(self, target):
-        target[target <= 3] = 0
-        target[target > 3] = 1
-        return target
+        self.preprocess_y()
+
+        self.x = self.data[self.x_columns].to_numpy().astype(np.int)
+        self.y = self.data[self.y_column].to_numpy().astype(np.float32)
+
+        self.feature_dims = np.max(self.x, axis=0)
+

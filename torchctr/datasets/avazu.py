@@ -10,7 +10,7 @@ class Avazu(BaseDataset):
         super().__init__()
 
 
-    def load_data(self):
+    def build_data(self):
         data = pd.read_csv(
             "~/.torchctr/avazu/train_mini.data", engine="python"
         )
@@ -18,7 +18,6 @@ class Avazu(BaseDataset):
         self.y_column = "click"
         self.x_columns = [c for c in self.data.columns if c!=self.y_column]
 
-        self.data = self.data.astype({c: str for c in self.x_columns})
         # process x
         self.preprocess_x()
         # build feature
@@ -28,4 +27,3 @@ class Avazu(BaseDataset):
         self.y = self.data[self.y_column].to_numpy().astype(np.float32)
 
         self.feature_dims = np.max(self.x, axis=0)
-        return (self.x, self.y)
