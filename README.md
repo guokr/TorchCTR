@@ -17,7 +17,7 @@
 
 
 <h2 align="center">TorchCTR</h2>
-TorchCTR is a easy-to-use ML package for CTR (Click Through Rate) prediction and ranking in recommender system with Facebook PyTorch.
+TorchCTR is a scalable and easy-to-use ML package for CTR (Click Through Rate) prediction and ranking in recommender system with Facebook PyTorch.
 
 <h2 align="center">Install</h2>
 `$ bash pip install torchctr --user`
