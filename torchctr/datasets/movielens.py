@@ -28,7 +28,7 @@ class MovieLens(BaseDataset):
         # process x
         self.preprocess_x()
         # build feature
-        self.preprocess_y()
+        self.preprocess_y(y_func=lambda x: 1 if x>3 else 0)
 
         self.x = self.data[self.x_columns].to_numpy().astype(np.int)
         self.y = self.data[self.y_column].to_numpy().astype(np.float32)

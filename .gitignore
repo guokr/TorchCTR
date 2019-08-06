@@ -102,7 +102,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-dest_dir/
 *.swp
 checkpoints/
-processed_data/
+*.pt

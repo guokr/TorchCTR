@@ -3,8 +3,10 @@
 
 import os
 import torch
+import pickle
 from torch.utils.data import DataLoader
 from torchctr.progressbar import ProgressBar
+from torchctr.dashboard import MetricLogger
 
 
 class Trainer:
@@ -59,11 +61,14 @@ class Trainer:
             weight_decay=self.param.get("weight_decay"),
         )
 
+        logger = MetricLogger()
+
         trainer_setup = {
             "train_loader": train_loader,
             "valid_loader": valid_loader,
             "criterion": criterion,
             "optimizer": optimizer,
+            "logger": logger
         }
 
         return trainer_setup
@@ -98,6 +103,11 @@ class Trainer:
                 target.tolist(), y.tolist(), {"loss": loss.item()}
             )
 
+        progress_bar.summarize()
+        self.trainer_setup.get("logger").log(trace="train",
+                                             stats=progress_bar.summary)
+
+
     def valid_step(self):
         self.model.eval()
         progress_bar = ProgressBar(
@@ -118,10 +128,18 @@ class Trainer:
                 target.tolist(), y.tolist(), {"loss": loss.item()}
             )
 
+        progress_bar.summarize()
+        self.trainer_setup.get("logger").log(trace="validation",
+                                             stats=progress_bar.summary)
+
     def save(self, file_fullpath):
         path, filename = os.path.split(file_fullpath)
         if os.path.exists(path) or path == "":
             torch.save(self.model, file_fullpath)
+            pickle.dump(self.trainer_setup.get("logger").logs, open(file_fullpath+".p", "wb"))
+
         else:
+            print("| Didn't find dir, so we will create it")
             os.mkdir(path)
             torch.save(self.model, file_fullpath)
+            pickle.dump(self.trainer_setup.get("logger").logs, open(file_fullpath+".p", "wb"))
