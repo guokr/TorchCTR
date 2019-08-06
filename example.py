@@ -28,3 +28,4 @@ hyper_parameters = {
 
 trainer = Trainer(model, dataset, hyper_parameters)
 trainer.train()
+trainer.save("test.pt")

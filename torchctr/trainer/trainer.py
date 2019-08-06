@@ -116,3 +116,6 @@ class Trainer:
             progress_bar.eval(
                 target.tolist(), y.tolist(), {"loss": loss.item()}
             )
+
+    def save(self, filename):
+        torch.save(self.model, filename)
