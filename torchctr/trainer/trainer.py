@@ -3,7 +3,7 @@
 
 import torch
 from torch.utils.data import DataLoader
-from tqdm import tqdm
+from torchctr.progressbar import ProgressBar
 
 
 class Trainer:
@@ -22,10 +22,10 @@ class Trainer:
             "learning_rate": 0.01,
             "weight_decay": 1e-6,
             "epochs": 10,
-            "print_interval": 1000,
+            "metrics": ["auc"],
         }
 
-        for k, v in param:
+        for k, v in param.items():
             if k in default_param:
                 default_param[k] = v
 
@@ -33,7 +33,7 @@ class Trainer:
 
     def build_trainer(self):
         print("| building trainer ...")
-        train_length = int(len(self.dataset) * 0.8)
+        train_length = int(len(self.dataset) * 0.9)
         valid_length = len(self.dataset) - train_length
 
         train_dataset, valid_dataset = torch.utils.data.random_split(
@@ -71,28 +71,28 @@ class Trainer:
         print("| start training ...")
         self.model.train()
         for e in range(self.param.get("epochs")):
-            self.train_step()
+            self.train_step(e + 1)
 
-    def train_step(self):
-        total_loss = 0
-        for i, (fields, target) in enumerate(
-            tqdm(
-                self.trainer_setup.get("train_loader"),
-                smoothing=0,
-                mininterval=1.0,
-            )
-        ):
+    def train_step(self, epoch):
+        progress_bar = ProgressBar(
+            self.trainer_setup.get("train_loader"),
+            self.param.get("metrics"),
+            desc="| Training {}/{}".format(epoch, self.param.get("epochs")),
+        )
+
+        for (fields, target) in progress_bar:
             fields, target = (
                 fields.to(self.param.get("device")),
                 target.to(self.param.get("device")),
             )
             y = self.model(fields)
+
+            # targetl.extend(target.tolist())
+
             loss = self.trainer_setup.get("criterion")(y, target.float())
             self.model.zero_grad()
             loss.backward()
             self.trainer_setup.get("optimizer").step()
-            total_loss += loss.item()
 
-            if (i + 1) % self.param.get("print_interval") == 0:
-                print("loss:", total_loss / self.param.get("print_interval"))
-                total_loss = 0
+
+            progress_bar.eval(target.tolist(), y.tolist(), {"loss": loss.item()})

@@ -15,7 +15,6 @@ class BaseDataset(Dataset):
         raise NotImplementedError
 
     def preprocess_x(self, non_categorical=[], non_categorical_func=None):
-
         if non_categorical_func == None:
             print("| Warning | Didn't specify the func for dense field, so we will use default log ")
             non_categorical_func = lambda x: int(math.log(x+10) ** 2)
@@ -49,10 +48,11 @@ class BaseDataset(Dataset):
                 lambda x: self.feature_mapper[self.field_mapper[c]][x]
             )
 
-    def preprocess_y(self):
-        self.data[self.y_column] = self.data[self.y_column].apply(
-            lambda x: 1 if x > 3 else 0
-        )
+    def preprocess_y(self, y_func=None):
+        if y_func == None:
+            print("| Warning | Didn't specify the func for target column, so we will use raw data")
+
+        # self.data[self.y_column] = self.data[self.y_column]
 
     def __len__(self):
         return self.y.shape[0]

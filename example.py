@@ -14,8 +14,17 @@ dataset.build_data()
 dims = dataset.feature_dims
 print("dataset dims", dims)
 
-# model = LogisticRegression(dims)
-model = FactorizationMachine(dims, embed_dim=4)
+model = LogisticRegression(dims)
+# model = FactorizationMachine(dims, embed_dim=4)
 
-trainer = Trainer(model, dataset)
+hyper_parameters = {
+    "batch_size": 128,
+    "device": "cpu",
+    "learning_rate": 0.01,
+    "weight_decay": 1e-6,
+    "epochs": 10,
+    "metrics": ["auc"]
+}
+
+trainer = Trainer(model, dataset, hyper_parameters)
 trainer.train()
