@@ -3,7 +3,7 @@
 
 import os
 import torch
-import pickle
+import requests
 from torch.utils.data import DataLoader
 from torchctr.progressbar import ProgressBar
 from torchctr.dashboard import MetricLogger
@@ -73,11 +73,22 @@ class Trainer:
 
         return trainer_setup
 
-    def train(self):
-        print("| start training ...")
+    def train(self, dashboard_address=None):
+        dashboard_status = False
+
+        if dashboard_address is None:
+            print("| Didn't find dashboard")
+        elif requests.get(url="http://{}/ping".format(dashboard_address)).status_code != 200:
+            print("| Dashboard down")
+        else:
+            dashboard_status = True
+
+        print("| Start training ...")
         for e in range(self.param.get("epochs")):
             self.train_step(e + 1)
             self.valid_step()
+            if dashboard_status is True:
+                self.trainer_setup.get("logger").send(dashboard_address)
 
     def train_step(self, epoch):
         self.model.train()
@@ -132,14 +143,11 @@ class Trainer:
         self.trainer_setup.get("logger").log(trace="validation",
                                              stats=progress_bar.summary)
 
-    def save(self, file_fullpath):
+    def save_model(self, file_fullpath):
         path, filename = os.path.split(file_fullpath)
         if os.path.exists(path) or path == "":
             torch.save(self.model, file_fullpath)
-            pickle.dump(self.trainer_setup.get("logger").logs, open(file_fullpath+".p", "wb"))
-
         else:
             print("| Didn't find dir, so we will create it")
             os.mkdir(path)
             torch.save(self.model, file_fullpath)
-            pickle.dump(self.trainer_setup.get("logger").logs, open(file_fullpath+".p", "wb"))

@@ -3,6 +3,5 @@
 
 from torchctr.dashboard import Dashboard
 
-v = Dashboard(page_title="Test Title", page_desc="----------")
-v.load()
+v = Dashboard(page_title="Hello TorchCTR", page_desc="I'm monitoring metrics ")
 v.run()
