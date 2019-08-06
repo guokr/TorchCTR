@@ -69,11 +69,12 @@ class Trainer:
 
     def train(self):
         print("| start training ...")
-        self.model.train()
         for e in range(self.param.get("epochs")):
             self.train_step(e + 1)
+            self.valid_step()
 
     def train_step(self, epoch):
+        self.model.train()
         progress_bar = ProgressBar(
             self.trainer_setup.get("train_loader"),
             self.param.get("metrics"),
@@ -87,12 +88,31 @@ class Trainer:
             )
             y = self.model(fields)
 
-            # targetl.extend(target.tolist())
-
             loss = self.trainer_setup.get("criterion")(y, target.float())
             self.model.zero_grad()
             loss.backward()
             self.trainer_setup.get("optimizer").step()
 
+            progress_bar.eval(
+                target.tolist(), y.tolist(), {"loss": loss.item()}
+            )
 
-            progress_bar.eval(target.tolist(), y.tolist(), {"loss": loss.item()})
+    def valid_step(self):
+        self.model.eval()
+        progress_bar = ProgressBar(
+            self.trainer_setup.get("valid_loader"),
+            self.param.get("metrics"),
+            desc="| Validating"
+        )
+
+        for (fields, target) in progress_bar:
+            fields, target = (
+                fields.to(self.param.get("device")),
+                target.to(self.param.get("device")),
+            )
+            y = self.model(fields)
+            loss = self.trainer_setup.get("criterion")(y, target.float())
+
+            progress_bar.eval(
+                target.tolist(), y.tolist(), {"loss": loss.item()}
+            )

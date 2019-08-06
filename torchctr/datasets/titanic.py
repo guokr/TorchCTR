@@ -5,12 +5,18 @@ import numpy as np
 import pandas as pd
 from .base import BaseDataset
 
+
 class Titanic(BaseDataset):
     def __init__(self):
         None
 
     def build_data(self):
-        self.data = pd.read_csv("~/.torchctr/titanic/titanic_train.txt", sep="\t", header=None, engine="python")
+        self.data = pd.read_csv(
+            "~/.torchctr/titanic/titanic_train.txt",
+            sep="\t",
+            header=None,
+            engine="python",
+        )
 
         non_categorical = ["I{}".format(_) for _ in range(1, 3)]
         categorical = ["C{}".format(_) for _ in range(1, 13)]
@@ -27,4 +33,3 @@ class Titanic(BaseDataset):
         self.y = self.data[self.y_column].to_numpy().astype(np.float32)
 
         self.feature_dims = np.max(self.x, axis=0)
-

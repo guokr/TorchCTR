@@ -23,7 +23,7 @@ hyper_parameters = {
     "learning_rate": 0.01,
     "weight_decay": 1e-6,
     "epochs": 10,
-    "metrics": ["auc"]
+    "metrics": ["auc"],
 }
 
 trainer = Trainer(model, dataset, hyper_parameters)

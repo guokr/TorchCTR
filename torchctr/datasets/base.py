@@ -16,8 +16,10 @@ class BaseDataset(Dataset):
 
     def preprocess_x(self, non_categorical=[], non_categorical_func=None):
         if non_categorical_func == None:
-            print("| Warning | Didn't specify the func for dense field, so we will use default log ")
-            non_categorical_func = lambda x: int(math.log(x+10) ** 2)
+            print(
+                "| Warning | Didn't specify the func for dense field, so we will use default log "
+            )
+            non_categorical_func = lambda x: int(math.log(x + 10) ** 2)
 
         self.field_mapper = {
             field: idx for idx, field in enumerate(self.x_columns)
@@ -27,7 +29,9 @@ class BaseDataset(Dataset):
 
         for c in self.x_columns:
             if c in non_categorical:
-                self.data[c] = self.data[c].apply(lambda x: non_categorical_func(x))
+                self.data[c] = self.data[c].apply(
+                    lambda x: non_categorical_func(x)
+                )
             di = self.data[c].value_counts()
             di.index = di.index.astype(str)
             feature_counter[self.field_mapper[c]] = di.to_dict()
@@ -50,7 +54,9 @@ class BaseDataset(Dataset):
 
     def preprocess_y(self, y_func=None):
         if y_func == None:
-            print("| Warning | Didn't specify the func for target column, so we will use raw data")
+            print(
+                "| Warning | Didn't specify the func for target column, so we will use raw data"
+            )
 
         # self.data[self.y_column] = self.data[self.y_column]
 
