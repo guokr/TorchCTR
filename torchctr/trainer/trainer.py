@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
+import os
 import torch
 from torch.utils.data import DataLoader
 from torchctr.progressbar import ProgressBar
@@ -117,5 +118,10 @@ class Trainer:
                 target.tolist(), y.tolist(), {"loss": loss.item()}
             )
 
-    def save(self, filename):
-        torch.save(self.model, filename)
+    def save(self, file_fullpath):
+        path, filename = os.path.split(file_fullpath)
+        if os.path.exists(path) or path=="":
+            torch.save(self.model, file_fullpath)
+        else:
+            os.mkdir(path)
+            torch.save(self.model, file_fullpath)
