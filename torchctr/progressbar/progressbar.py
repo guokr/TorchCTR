@@ -22,9 +22,9 @@ class ProgressBar:
             except ValueError:
                 auc_score = np.nan
 
-            res["auc"] = "{:.2f}".format(auc_score)
+            res["auc"] = "{:.3f}".format(auc_score)
 
         for k, v in append_dict.items():
-            res[k] = "{:.2f}".format(v)
+            res[k] = "{:.3}".format(v)
 
         self.tqdm.set_postfix(res)

@@ -103,7 +103,7 @@ class Trainer:
         progress_bar = ProgressBar(
             self.trainer_setup.get("valid_loader"),
             self.param.get("metrics"),
-            desc="| Validating"
+            desc="| Validating",
         )
 
         for (fields, target) in progress_bar:
@@ -120,7 +120,7 @@ class Trainer:
 
     def save(self, file_fullpath):
         path, filename = os.path.split(file_fullpath)
-        if os.path.exists(path) or path=="":
+        if os.path.exists(path) or path == "":
             torch.save(self.model, file_fullpath)
         else:
             os.mkdir(path)

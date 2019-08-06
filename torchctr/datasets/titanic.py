@@ -26,7 +26,6 @@ class Titanic(BaseDataset):
         self.data.columns = [self.y_column] + self.x_columns
 
         self.preprocess_x(non_categorical=non_categorical)
-
         self.preprocess_y()
 
         self.x = self.data[self.x_columns].to_numpy().astype(np.int)

@@ -32,6 +32,6 @@ class FactorizationMachine(torch.nn.Module):
 
     def forward(self, x, sigmoid=True):
         # add the first order and second order
-        x = self.linear(x) + self.fm(self.embedding(x))
+        fm_full = self.linear(x) + self.fm(self.embedding(x))
         if sigmoid:
-            return torch.sigmoid(x.squeeze(1))
+            return torch.sigmoid(fm_full.squeeze(1))

@@ -18,5 +18,5 @@ class EmbeddingLayer(torch.nn.Module):
         torch.nn.init.xavier_uniform_(self.weights_embed.weight.data)
 
     def forward(self, x):
-        x = x + self.feature_loc_offsets
-        return self.weights_embed(x)
+        adjusted_x = x + self.feature_loc_offsets
+        return self.weights_embed(adjusted_x)

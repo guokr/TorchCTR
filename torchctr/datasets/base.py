@@ -57,8 +57,8 @@ class BaseDataset(Dataset):
             print(
                 "| Warning | Didn't specify the func for target column, so we will use raw data"
             )
-
-        # self.data[self.y_column] = self.data[self.y_column]
+        else:
+            self.data[self.y_column] = self.data[self.y_column].apply(lambda x: y_func(x))
 
     def __len__(self):
         return self.y.shape[0]
