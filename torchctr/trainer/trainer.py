@@ -78,7 +78,6 @@ class Trainer:
 
         if dashboard_address is None:
             print("| Didn't find dashboard")
-
         else:
             try:
                 requests.get(url="http://{}/ping".format(dashboard_address))
@@ -86,7 +85,6 @@ class Trainer:
             except requests.exceptions.RequestException as e:
                 print("| ERROR in Dashboard connection: {}".format(e))
                 print("| Back to general training")
-
 
         print("| Start training ...")
         for e in range(self.param.get("epochs")):

@@ -22,8 +22,8 @@ hyper_parameters = {
     "device": "cpu",
     "learning_rate": 0.01,
     "weight_decay": 1e-6,
-    "epochs": 10,
-    "metrics": ["auc"],
+    "epochs": 100,
+    "metrics": ["auc", "acc"],
 }
 
 trainer = Trainer(model, dataset, hyper_parameters)

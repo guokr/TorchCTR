@@ -11,7 +11,7 @@ class MetricLogger:
 
     def log(self, trace, stats):
         for metric, value in stats.items():
-            self.logs[trace][metric].append(value)
+            self.logs[metric][trace].append(value)
 
     def send(self, dashboard_address):
         requests.post(url="http://{}/log".format(dashboard_address), json=self.logs)
