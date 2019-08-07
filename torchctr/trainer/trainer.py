@@ -78,10 +78,15 @@ class Trainer:
 
         if dashboard_address is None:
             print("| Didn't find dashboard")
-        elif requests.get(url="http://{}/ping".format(dashboard_address)).status_code != 200:
-            print("| Dashboard down")
+
         else:
-            dashboard_status = True
+            try:
+                requests.get(url="http://{}/ping".format(dashboard_address))
+                dashboard_status = True
+            except requests.exceptions.RequestException as e:
+                print("| ERROR in Dashboard connection: {}".format(e))
+                print("| Back to general training")
+
 
         print("| Start training ...")
         for e in range(self.param.get("epochs")):

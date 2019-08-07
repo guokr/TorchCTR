@@ -13,7 +13,12 @@ external_stylesheets = ["http://codepen.io/chriddyp/pen/bWLwgP.css"]
 
 class Dashboard:
     def __init__(
-        self, page_title="", page_desc="", host="0.0.0.0", port=8080, debug=True
+        self,
+        page_title="",
+        page_desc="",
+        host="0.0.0.0",
+        port=8080,
+        debug=False,
     ):
         self.page_title = page_title
         self.page_desc = page_desc
@@ -57,10 +62,15 @@ class Dashboard:
     def build_layout(self, data=[]):
         self.dash_app.layout = html.Div(
             children=[
-                html.H1(children=self.page_title),
-                html.Div(children=self.page_desc),
+                html.H1(children=self.page_title,
+                        style={
+                            "textAlign": "center",
+                        }),
+                html.Div(children=self.page_desc,
+                         style={"textAlign": "center"}),
                 dcc.Graph(
                     id="example-graph",
+                    style={"width": "50vh"},
                     figure={"data": data, "layout": {"title": "AUC"}},
                 ),
             ]

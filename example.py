@@ -22,11 +22,11 @@ hyper_parameters = {
     "device": "cpu",
     "learning_rate": 0.01,
     "weight_decay": 1e-6,
-    "epochs": 100,
+    "epochs": 10,
     "metrics": ["auc"],
 }
 
 trainer = Trainer(model, dataset, hyper_parameters)
-trainer.train(dashboard_address="localhost:8080")
+trainer.train(dashboard_address="localhost:8081")
 trainer.save_model("checkpoints/test.pt")
 
