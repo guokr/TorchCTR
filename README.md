@@ -23,9 +23,10 @@ TorchCTR is a scalable and easy-to-use ML package for CTR (Click Through Rate) p
 ### Models
 
 - [Logistic Regression]()
-- [Factorization Machine]()
-- [Field-Aware Factorization Machine]()
-- [Google Wide and Deep]()
+- [Factorization Machine](https://www.csie.ntu.edu.tw/~b97053/paper/Rendle2010FM.pdf)
+- [Field-Aware Factorization Machine](https://www.csie.ntu.edu.tw/~cjlin/papers/ffm.pdf)
+- [Google Wide and Deep](https://arxiv.org/abs/1606.07792)
+- [DeepFM](https://arxiv.org/abs/1703.04247)
 
 
 <h2 align="center">Install</h2>

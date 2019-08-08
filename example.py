@@ -2,7 +2,9 @@
 # encoding: utf-8
 
 from torchctr.datasets import MovieLens, Titanic, Avazu
-from torchctr.models import LogisticRegression, FactorizationMachine, FieldAwareFactorizationMachine, WideAndDeepModel
+from torchctr.models import LogisticRegression, FactorizationMachine, FieldAwareFactorizationMachine
+from torchctr.models import  WideAndDeepModel, DeepFactorizationMachine
+
 from torchctr.trainer import Trainer
 
 # dataset = MovieLens()
@@ -16,7 +18,8 @@ print("dataset dims", dims)
 # model = LogisticRegression(dims)
 # model = FactorizationMachine(dims, embed_dim=4)
 # model = FieldAwareFactorizationMachine(dims, embed_dim=4)
-model = WideAndDeepModel(dims, embed_dim=4, hidden_dims=[10,10,10])
+# model = WideAndDeepModel(dims, embed_dim=4, hidden_dims=[10,10,10])
+model = DeepFactorizationMachine(dims, embed_dim=4, hidden_dims=[10, 10, 10])
 
 hyper_parameters = {
     "batch_size": 128,
