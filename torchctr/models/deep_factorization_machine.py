@@ -18,8 +18,9 @@ class DeepFactorizationMachine(torch.nn.Module):
             input_dim=self.mlp_input_dim, hidden_dims=hidden_dims, output_dim=1
         )
 
-    def forward(self, x):
+    def forward(self, x, sigmoid=True):
         fm_part = self.fm_second_order(self.embedding(x)) + self.fm_linear(x)
         deep_part = self.mlp(self.embedding(x).view(-1, self.mlp_input_dim))
         deep_fm = fm_part + deep_part
-        return torch.sigmoid(deep_fm.squeeze(1))
+        if sigmoid:
+            return torch.sigmoid(deep_fm.squeeze(1))

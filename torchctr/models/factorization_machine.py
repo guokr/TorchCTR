@@ -18,6 +18,8 @@ class FactorizationMachineLayer(torch.nn.Module):
 
         if self.reduce_sum:
             return 0.5 * torch.sum(res, dim=1, keepdim=True)
+        else:
+            return res
 
 
 class FactorizationMachine(torch.nn.Module):

@@ -3,7 +3,8 @@
 
 from torchctr.datasets import MovieLens, Titanic, Avazu
 from torchctr.models import LogisticRegression, FactorizationMachine, FieldAwareFactorizationMachine
-from torchctr.models import  WideAndDeepModel, DeepFactorizationMachine
+from torchctr.models import  WideAndDeepModel
+from torchctr.models import FieldAwareNeuralFactorizationMachine, DeepFactorizationMachine, NeuralFactorizationMachine
 
 from torchctr.trainer import Trainer
 
@@ -19,7 +20,9 @@ print("dataset dims", dims)
 # model = FactorizationMachine(dims, embed_dim=4)
 # model = FieldAwareFactorizationMachine(dims, embed_dim=4)
 # model = WideAndDeepModel(dims, embed_dim=4, hidden_dims=[10,10,10])
-model = DeepFactorizationMachine(dims, embed_dim=4, hidden_dims=[10, 10, 10])
+# model = DeepFactorizationMachine(dims, embed_dim=4, hidden_dims=[10, 10, 10])
+# model = NeuralFactorizationMachine(dims, embed_dim=4, hidden_dims=[10, 10, 10])
+model = FieldAwareNeuralFactorizationMachine(dims, embed_dim=4, hidden_dims=[10, 10, 10])
 
 hyper_parameters = {
     "batch_size": 128,
