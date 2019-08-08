@@ -28,14 +28,16 @@ TorchCTR is a scalable and easy-to-use ML package for CTR (Click Through Rate) p
 
 ### Deep Learning Models
 
-- [Wide and Deep by Google](https://arxiv.org/abs/1606.07792)
-- [DeepFM by Huawei & HIT](https://arxiv.org/abs/1703.04247)
-- [Neural Factorization Machine by NUS](https://arxiv.org/pdf/1708.05027.pdf)
-- [Field-aware Neural Factorization Machine](https://arxiv.org/abs/1902.09096)
-- Factorization-supported Neural Network
-- Product-based Neural Network
-- 
-
+- [x] [Wide and Deep by Google](https://arxiv.org/abs/1606.07792)
+- [x] [DeepFM by Huawei & HIT](https://arxiv.org/abs/1703.04247)
+- [x] [Neural Factorization Machine by NUS](https://arxiv.org/pdf/1708.05027.pdf)
+- [x] [Field-aware Neural Factorization Machine](https://arxiv.org/abs/1902.09096)
+- [ ] [Factorization-supported Neural Network](https://arxiv.org/abs/1601.02376)
+- [ ] [Product-based Neural Network](https://arxiv.org/abs/1611.00144)
+- [ ] [Attentional Factorization Machine](https://arxiv.org/abs/1708.04617)
+- [ ] [Deep and Cross Network](https://arxiv.org/abs/1708.05123)
+- [ ] [Deep Interest Network](https://arxiv.org/abs/1706.06978)
+- [ ] [eXtreme Deep Factorization Machine](https://arxiv.org/abs/1803.05170)
 
 
 <h2 align="center">Install</h2>
