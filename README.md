@@ -42,7 +42,7 @@ TorchCTR is a scalable and easy-to-use ML package for CTR (Click Through Rate) p
 
 <h2 align="center">Install</h2>
 
-`$ bash pip install torchctr --user`
+`pip install torchctr --user`
 
 <h2 align="center">Getting Started</h2>
 

@@ -16,5 +16,5 @@ __all__ = [
     WideAndDeepModel,
     DeepFactorizationMachine,
     NeuralFactorizationMachine,
-    FieldAwareNeuralFactorizationMachine
+    FieldAwareNeuralFactorizationMachine,
 ]

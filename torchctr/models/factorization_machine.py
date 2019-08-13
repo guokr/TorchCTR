@@ -3,6 +3,7 @@
 
 import torch
 from torchctr.layers import EmbeddingLayer, LinearLayer
+from torchctr.models.checker import Checker
 
 
 class FactorizationMachineLayer(torch.nn.Module):
@@ -26,8 +27,11 @@ class FactorizationMachine(torch.nn.Module):
     """
     FactorizationMachine Model
     """
+
+    @Checker.model_param_check
     def __init__(self, feature_dims, embed_dim):
         super().__init__()
+
         self.embedding = EmbeddingLayer(feature_dims, embed_dim)
         self.linear = LinearLayer(feature_dims)
         self.fm = FactorizationMachineLayer(reduce_sum=True)
@@ -37,3 +41,7 @@ class FactorizationMachine(torch.nn.Module):
         fm_full = self.linear(x) + self.fm(self.embedding(x))
         if sigmoid:
             return torch.sigmoid(fm_full.squeeze(1))
+
+    def __repr__(self):
+        return self.__class__.__name__
+
