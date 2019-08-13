@@ -4,9 +4,11 @@
 import torch
 from torchctr.layers import LinearLayer, EmbeddingLayer, MultiLayerPerceptron
 from torchctr.models.factorization_machine import FactorizationMachineLayer
+from torchctr.models.checker import Checker
 
 
 class DeepFactorizationMachine(torch.nn.Module):
+    @Checker.model_param_check
     def __init__(self, feature_dims, embed_dim, hidden_dims):
         super().__init__()
         self.fm_second_order = FactorizationMachineLayer()

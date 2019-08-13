@@ -3,10 +3,11 @@
 
 
 import dash
-import dash_core_components as dcc
 import dash_html_components as html
+from collections import defaultdict
 
 from flask import Flask, request
+from .div_builder import div_build
 
 external_stylesheets = ["http://codepen.io/chriddyp/pen/bWLwgP.css"]
 
@@ -28,9 +29,26 @@ class Dashboard:
             server=self.flask_app,
             external_stylesheets=external_stylesheets,
         )
+        self.layout_dict = defaultdict(list)
+        self.layout_dict["header"] = self.build_header()
 
-        self.build_routes()
         self.build_layout()
+        self.build_routes()
+
+    def build_layout(self):
+        layout_contents = []
+        for div_name, div_content in self.layout_dict.items():
+            layout_contents.append(html.Div(div_content))
+
+        self.dash_app.layout = html.Div(layout_contents)
+
+    def build_header(self):
+        header_div = [
+            html.H1(children=self.page_title, style={"textAlign": "center"}),
+            html.Div(children=self.page_desc, style={"textAlign": "center"}),
+        ]
+
+        return html.Div(header_div)
 
     def build_routes(self):
         self.flask_app.add_url_rule("/ping", "ping", self.ping, methods=["GET"])
@@ -40,64 +58,12 @@ class Dashboard:
         return "OK"
 
     def log(self):
-        d = request.json
-        divs = []
-        for metric, trace_log in d.items():
-            dash_data = []
-            for trace, log_values in trace_log.items():
-                dash_data.append(
-                    {
-                        "x": [i for i in range(1, len(log_values) + 1)],
-                        "y": log_values,
-                        "type": "line",
-                        "name": "{}-{}".format(metric, trace),
-                    }
-                )
+        json_data = request.json
+        div_name, div_content = div_build(json_data)
+        self.layout_dict[div_name] = div_content
+        self.build_layout()
 
-            divs.append(self.build_div(dash_data, title=metric))
-
-        self.build_layout(divs)
         return ("", 204)
-
-    def build_div(self, data, title):
-        single_div = html.Div(
-            dcc.Graph(
-                id="{}".format(title),
-                style={"width": "45vh", "display": "inline-block"},
-                figure={"data": data, "layout": {"title": title}},
-            )
-        )
-        return single_div
-
-    def div_resize(self, divs):
-        number_graphs = len(divs)
-        percent_width = 100 // number_graphs
-        for div in divs:
-            div.children.style["width"] = "{}vh".format(percent_width)
-
-        return divs
-
-    def build_layout(self, divs=[]):
-        if divs != []:
-            divs = self.div_resize(divs)
-
-        self.dash_app.layout = html.Div(
-            [
-                html.Div(
-                    [
-                        html.H1(
-                            children=self.page_title,
-                            style={"textAlign": "center"},
-                        ),
-                        html.Div(
-                            children=self.page_desc,
-                            style={"textAlign": "center"},
-                        ),
-                    ]
-                ),
-                html.Div(divs, style={"columnCount": len(divs)}),
-            ]
-        )
 
     def run(self):
         self.dash_app.run_server(

@@ -4,8 +4,10 @@
 import torch
 from torchctr.layers import MultiLayerPerceptron, LinearLayer
 from torchctr.models.fieldaware_factorization_machine import FieldAwareFactorizationMachineLayer
+from torchctr.models.checker import Checker
 
 class FieldAwareNeuralFactorizationMachine(torch.nn.Module):
+    @Checker.model_param_check
     def __init__(self, feature_dims, embed_dim, hidden_dims):
         super().__init__()
         self.linear = LinearLayer(feature_dims)

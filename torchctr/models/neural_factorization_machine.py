@@ -4,9 +4,11 @@
 import torch
 from torchctr.layers import EmbeddingLayer, LinearLayer, MultiLayerPerceptron
 from torchctr.models.factorization_machine import FactorizationMachineLayer
+from torchctr.models.checker import Checker
 
 
 class NeuralFactorizationMachine(torch.nn.Module):
+    @Checker.model_param_check
     def __init__(self, feature_dims, embed_dim, hidden_dims):
         super().__init__()
         self.embedding = EmbeddingLayer(feature_dims, embed_dim)

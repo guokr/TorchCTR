@@ -4,6 +4,7 @@
 import torch
 import numpy as np
 from torchctr.layers import LinearLayer
+from torchctr.models.checker import Checker
 
 
 class FieldAwareFactorizationMachineLayer(torch.nn.Module):
@@ -42,6 +43,7 @@ class FieldAwareFactorizationMachineLayer(torch.nn.Module):
 
 
 class FieldAwareFactorizationMachine(torch.nn.Module):
+    @Checker.model_param_check
     def __init__(self, feature_dims, embed_dim):
         super().__init__()
         self.linear = LinearLayer(feature_dims)
