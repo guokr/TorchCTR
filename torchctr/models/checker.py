@@ -13,6 +13,10 @@ MODEL_PARAMS = {
 
 
 class Checker(object):
+    """
+    Checker for model arguments
+
+    """
 
     @classmethod
     def model_param_check(cls, init_model):

@@ -5,4 +5,4 @@ from .linear import LinearLayer
 from .embedding import EmbeddingLayer
 from .perceptron import MultiLayerPerceptron
 
-__all__ = [LinearLayer, EmbeddingLayer, MultiLayerPerceptron]
+__all__ = ["LinearLayer", "EmbeddingLayer", "MultiLayerPerceptron"]

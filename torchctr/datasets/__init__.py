@@ -5,5 +5,4 @@ from .movielens import MovieLens
 from .titanic import Titanic
 from .avazu import Avazu
 
-__all__ = [MovieLens, Titanic, Avazu]
-
+__all__ = ["MovieLens", "Titanic", "Avazu"]

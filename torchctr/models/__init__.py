@@ -10,11 +10,11 @@ from .neural_factorization_machine import NeuralFactorizationMachine
 from .fieldaware_neural_factorization_machine import FieldAwareNeuralFactorizationMachine
 
 __all__ = [
-    LogisticRegression,
-    FactorizationMachine,
-    FieldAwareFactorizationMachine,
-    WideAndDeepModel,
-    DeepFactorizationMachine,
-    NeuralFactorizationMachine,
-    FieldAwareNeuralFactorizationMachine,
+    "LogisticRegression",
+    "FactorizationMachine",
+    "FieldAwareFactorizationMachine",
+    "WideAndDeepModel",
+    "DeepFactorizationMachine",
+    "NeuralFactorizationMachine",
+    "FieldAwareNeuralFactorizationMachine",
 ]

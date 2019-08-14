@@ -4,4 +4,4 @@
 from .metric_logger import MetricLogger
 from .dashboard import Dashboard
 
-__all__ = [MetricLogger, Dashboard]
+__all__ = ["MetricLogger", "Dashboard"]

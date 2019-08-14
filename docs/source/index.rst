@@ -6,6 +6,11 @@
 Welcome to TorchCTR's documentation!
 ====================================
 
+
+
+.. mdinclude:: ../../README.md
+
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
