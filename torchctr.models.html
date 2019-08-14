@@ -1,0 +1,575 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>torchctr.models package &mdash; TorchCTR  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> TorchCTR
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">torchctr.models package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-torchctr.models.checker">torchctr.models.checker module</a></li>
+<li><a class="reference internal" href="#module-torchctr.models.deep_factorization_machine">torchctr.models.deep_factorization_machine module</a></li>
+<li><a class="reference internal" href="#module-torchctr.models.factorization_machine">torchctr.models.factorization_machine module</a></li>
+<li><a class="reference internal" href="#module-torchctr.models.fieldaware_factorization_machine">torchctr.models.fieldaware_factorization_machine module</a></li>
+<li><a class="reference internal" href="#module-torchctr.models.fieldaware_neural_factorization_machine">torchctr.models.fieldaware_neural_factorization_machine module</a></li>
+<li><a class="reference internal" href="#module-torchctr.models.logistic_regression">torchctr.models.logistic_regression module</a></li>
+<li><a class="reference internal" href="#module-torchctr.models.neural_factorization_machine">torchctr.models.neural_factorization_machine module</a></li>
+<li><a class="reference internal" href="#module-torchctr.models.wide_and_deep">torchctr.models.wide_and_deep module</a></li>
+<li><a class="reference internal" href="#module-torchctr.models">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TorchCTR</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>torchctr.models package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/torchctr.models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="torchctr-models-package">
+<h1>torchctr.models package<a class="headerlink" href="#torchctr-models-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-torchctr.models.checker">
+<span id="torchctr-models-checker-module"></span><h2>torchctr.models.checker module<a class="headerlink" href="#module-torchctr.models.checker" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchctr.models.checker.Checker">
+<em class="property">class </em><code class="descclassname">torchctr.models.checker.</code><code class="descname">Checker</code><a class="reference internal" href="_modules/torchctr/models/checker.html#Checker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.checker.Checker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Checker for model arguments</p>
+<dl class="staticmethod">
+<dt id="torchctr.models.checker.Checker.model_check">
+<em class="property">static </em><code class="descname">model_check</code><span class="sig-paren">(</span><em>model_name</em>, <em>kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/checker.html#Checker.model_check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.checker.Checker.model_check" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="torchctr.models.checker.Checker.model_param_check">
+<em class="property">classmethod </em><code class="descname">model_param_check</code><span class="sig-paren">(</span><em>init_model</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/checker.html#Checker.model_param_check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.checker.Checker.model_param_check" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchctr.models.deep_factorization_machine">
+<span id="torchctr-models-deep-factorization-machine-module"></span><h2>torchctr.models.deep_factorization_machine module<a class="headerlink" href="#module-torchctr.models.deep_factorization_machine" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchctr.models.deep_factorization_machine.DeepFactorizationMachine">
+<em class="property">class </em><code class="descclassname">torchctr.models.deep_factorization_machine.</code><code class="descname">DeepFactorizationMachine</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/deep_factorization_machine.html#DeepFactorizationMachine"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.deep_factorization_machine.DeepFactorizationMachine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchctr.models.deep_factorization_machine.DeepFactorizationMachine.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>x</em>, <em>sigmoid=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/deep_factorization_machine.html#DeepFactorizationMachine.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.deep_factorization_machine.DeepFactorizationMachine.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchctr.models.factorization_machine">
+<span id="torchctr-models-factorization-machine-module"></span><h2>torchctr.models.factorization_machine module<a class="headerlink" href="#module-torchctr.models.factorization_machine" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchctr.models.factorization_machine.FactorizationMachine">
+<em class="property">class </em><code class="descclassname">torchctr.models.factorization_machine.</code><code class="descname">FactorizationMachine</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/factorization_machine.html#FactorizationMachine"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.factorization_machine.FactorizationMachine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>FactorizationMachine Model</p>
+<dl class="method">
+<dt id="torchctr.models.factorization_machine.FactorizationMachine.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>x</em>, <em>sigmoid=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/factorization_machine.html#FactorizationMachine.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.factorization_machine.FactorizationMachine.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchctr.models.factorization_machine.FactorizationMachineLayer">
+<em class="property">class </em><code class="descclassname">torchctr.models.factorization_machine.</code><code class="descname">FactorizationMachineLayer</code><span class="sig-paren">(</span><em>reduce_sum=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/factorization_machine.html#FactorizationMachineLayer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.factorization_machine.FactorizationMachineLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchctr.models.factorization_machine.FactorizationMachineLayer.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/factorization_machine.html#FactorizationMachineLayer.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.factorization_machine.FactorizationMachineLayer.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchctr.models.fieldaware_factorization_machine">
+<span id="torchctr-models-fieldaware-factorization-machine-module"></span><h2>torchctr.models.fieldaware_factorization_machine module<a class="headerlink" href="#module-torchctr.models.fieldaware_factorization_machine" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchctr.models.fieldaware_factorization_machine.FieldAwareFactorizationMachine">
+<em class="property">class </em><code class="descclassname">torchctr.models.fieldaware_factorization_machine.</code><code class="descname">FieldAwareFactorizationMachine</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/fieldaware_factorization_machine.html#FieldAwareFactorizationMachine"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.fieldaware_factorization_machine.FieldAwareFactorizationMachine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchctr.models.fieldaware_factorization_machine.FieldAwareFactorizationMachine.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>x</em>, <em>sigmoid=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/fieldaware_factorization_machine.html#FieldAwareFactorizationMachine.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.fieldaware_factorization_machine.FieldAwareFactorizationMachine.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchctr.models.fieldaware_factorization_machine.FieldAwareFactorizationMachineLayer">
+<em class="property">class </em><code class="descclassname">torchctr.models.fieldaware_factorization_machine.</code><code class="descname">FieldAwareFactorizationMachineLayer</code><span class="sig-paren">(</span><em>feature_dims</em>, <em>embed_dim</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/fieldaware_factorization_machine.html#FieldAwareFactorizationMachineLayer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.fieldaware_factorization_machine.FieldAwareFactorizationMachineLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchctr.models.fieldaware_factorization_machine.FieldAwareFactorizationMachineLayer.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/fieldaware_factorization_machine.html#FieldAwareFactorizationMachineLayer.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.fieldaware_factorization_machine.FieldAwareFactorizationMachineLayer.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchctr.models.fieldaware_neural_factorization_machine">
+<span id="torchctr-models-fieldaware-neural-factorization-machine-module"></span><h2>torchctr.models.fieldaware_neural_factorization_machine module<a class="headerlink" href="#module-torchctr.models.fieldaware_neural_factorization_machine" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchctr.models.fieldaware_neural_factorization_machine.FieldAwareNeuralFactorizationMachine">
+<em class="property">class </em><code class="descclassname">torchctr.models.fieldaware_neural_factorization_machine.</code><code class="descname">FieldAwareNeuralFactorizationMachine</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/fieldaware_neural_factorization_machine.html#FieldAwareNeuralFactorizationMachine"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.fieldaware_neural_factorization_machine.FieldAwareNeuralFactorizationMachine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchctr.models.fieldaware_neural_factorization_machine.FieldAwareNeuralFactorizationMachine.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>x</em>, <em>sigmoid=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/fieldaware_neural_factorization_machine.html#FieldAwareNeuralFactorizationMachine.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.fieldaware_neural_factorization_machine.FieldAwareNeuralFactorizationMachine.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchctr.models.logistic_regression">
+<span id="torchctr-models-logistic-regression-module"></span><h2>torchctr.models.logistic_regression module<a class="headerlink" href="#module-torchctr.models.logistic_regression" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchctr.models.logistic_regression.LogisticRegression">
+<em class="property">class </em><code class="descclassname">torchctr.models.logistic_regression.</code><code class="descname">LogisticRegression</code><span class="sig-paren">(</span><em>feature_dims</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/logistic_regression.html#LogisticRegression"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.logistic_regression.LogisticRegression" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Simple LR with sigmoid or not</p>
+<dl class="method">
+<dt id="torchctr.models.logistic_regression.LogisticRegression.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>x</em>, <em>sigmoid=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/logistic_regression.html#LogisticRegression.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.logistic_regression.LogisticRegression.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchctr.models.neural_factorization_machine">
+<span id="torchctr-models-neural-factorization-machine-module"></span><h2>torchctr.models.neural_factorization_machine module<a class="headerlink" href="#module-torchctr.models.neural_factorization_machine" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchctr.models.neural_factorization_machine.NeuralFactorizationMachine">
+<em class="property">class </em><code class="descclassname">torchctr.models.neural_factorization_machine.</code><code class="descname">NeuralFactorizationMachine</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/neural_factorization_machine.html#NeuralFactorizationMachine"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.neural_factorization_machine.NeuralFactorizationMachine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchctr.models.neural_factorization_machine.NeuralFactorizationMachine.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>x</em>, <em>sigmoid=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/neural_factorization_machine.html#NeuralFactorizationMachine.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.neural_factorization_machine.NeuralFactorizationMachine.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchctr.models.wide_and_deep">
+<span id="torchctr-models-wide-and-deep-module"></span><h2>torchctr.models.wide_and_deep module<a class="headerlink" href="#module-torchctr.models.wide_and_deep" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchctr.models.wide_and_deep.WideAndDeepModel">
+<em class="property">class </em><code class="descclassname">torchctr.models.wide_and_deep.</code><code class="descname">WideAndDeepModel</code><span class="sig-paren">(</span><em>feature_dims</em>, <em>embed_dim</em>, <em>hidden_dims</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/wide_and_deep.html#WideAndDeepModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.wide_and_deep.WideAndDeepModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchctr.models.wide_and_deep.WideAndDeepModel.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>x</em>, <em>sigmoid=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/wide_and_deep.html#WideAndDeepModel.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.wide_and_deep.WideAndDeepModel.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchctr.models">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchctr.models" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchctr.models.LogisticRegression">
+<em class="property">class </em><code class="descclassname">torchctr.models.</code><code class="descname">LogisticRegression</code><span class="sig-paren">(</span><em>feature_dims</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/logistic_regression.html#LogisticRegression"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.LogisticRegression" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Simple LR with sigmoid or not</p>
+<dl class="method">
+<dt id="torchctr.models.LogisticRegression.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>x</em>, <em>sigmoid=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/logistic_regression.html#LogisticRegression.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.LogisticRegression.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchctr.models.FactorizationMachine">
+<em class="property">class </em><code class="descclassname">torchctr.models.</code><code class="descname">FactorizationMachine</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/factorization_machine.html#FactorizationMachine"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.FactorizationMachine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>FactorizationMachine Model</p>
+<dl class="method">
+<dt id="torchctr.models.FactorizationMachine.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>x</em>, <em>sigmoid=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/factorization_machine.html#FactorizationMachine.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.FactorizationMachine.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchctr.models.FieldAwareFactorizationMachine">
+<em class="property">class </em><code class="descclassname">torchctr.models.</code><code class="descname">FieldAwareFactorizationMachine</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/fieldaware_factorization_machine.html#FieldAwareFactorizationMachine"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.FieldAwareFactorizationMachine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchctr.models.FieldAwareFactorizationMachine.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>x</em>, <em>sigmoid=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/fieldaware_factorization_machine.html#FieldAwareFactorizationMachine.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.FieldAwareFactorizationMachine.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchctr.models.WideAndDeepModel">
+<em class="property">class </em><code class="descclassname">torchctr.models.</code><code class="descname">WideAndDeepModel</code><span class="sig-paren">(</span><em>feature_dims</em>, <em>embed_dim</em>, <em>hidden_dims</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/wide_and_deep.html#WideAndDeepModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.WideAndDeepModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchctr.models.WideAndDeepModel.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>x</em>, <em>sigmoid=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/wide_and_deep.html#WideAndDeepModel.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.WideAndDeepModel.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchctr.models.DeepFactorizationMachine">
+<em class="property">class </em><code class="descclassname">torchctr.models.</code><code class="descname">DeepFactorizationMachine</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/deep_factorization_machine.html#DeepFactorizationMachine"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.DeepFactorizationMachine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchctr.models.DeepFactorizationMachine.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>x</em>, <em>sigmoid=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/deep_factorization_machine.html#DeepFactorizationMachine.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.DeepFactorizationMachine.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchctr.models.NeuralFactorizationMachine">
+<em class="property">class </em><code class="descclassname">torchctr.models.</code><code class="descname">NeuralFactorizationMachine</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/neural_factorization_machine.html#NeuralFactorizationMachine"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.NeuralFactorizationMachine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchctr.models.NeuralFactorizationMachine.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>x</em>, <em>sigmoid=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/neural_factorization_machine.html#NeuralFactorizationMachine.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.NeuralFactorizationMachine.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchctr.models.FieldAwareNeuralFactorizationMachine">
+<em class="property">class </em><code class="descclassname">torchctr.models.</code><code class="descname">FieldAwareNeuralFactorizationMachine</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/fieldaware_neural_factorization_machine.html#FieldAwareNeuralFactorizationMachine"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.FieldAwareNeuralFactorizationMachine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchctr.models.FieldAwareNeuralFactorizationMachine.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>x</em>, <em>sigmoid=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/models/fieldaware_neural_factorization_machine.html#FieldAwareNeuralFactorizationMachine.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.models.FieldAwareNeuralFactorizationMachine.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, jinyang
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

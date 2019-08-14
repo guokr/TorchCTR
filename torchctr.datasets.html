@@ -1,0 +1,320 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>torchctr.datasets package &mdash; TorchCTR  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> TorchCTR
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">torchctr.datasets package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-torchctr.datasets.avazu">torchctr.datasets.avazu module</a></li>
+<li><a class="reference internal" href="#module-torchctr.datasets.base">torchctr.datasets.base module</a></li>
+<li><a class="reference internal" href="#module-torchctr.datasets.criteo">torchctr.datasets.criteo module</a></li>
+<li><a class="reference internal" href="#module-torchctr.datasets.movielens">torchctr.datasets.movielens module</a></li>
+<li><a class="reference internal" href="#module-torchctr.datasets.titanic">torchctr.datasets.titanic module</a></li>
+<li><a class="reference internal" href="#module-torchctr.datasets">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TorchCTR</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>torchctr.datasets package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/torchctr.datasets.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="torchctr-datasets-package">
+<h1>torchctr.datasets package<a class="headerlink" href="#torchctr-datasets-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-torchctr.datasets.avazu">
+<span id="torchctr-datasets-avazu-module"></span><h2>torchctr.datasets.avazu module<a class="headerlink" href="#module-torchctr.datasets.avazu" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchctr.datasets.avazu.Avazu">
+<em class="property">class </em><code class="descclassname">torchctr.datasets.avazu.</code><code class="descname">Avazu</code><a class="reference internal" href="_modules/torchctr/datasets/avazu.html#Avazu"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.datasets.avazu.Avazu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#torchctr.datasets.base.BaseDataset" title="torchctr.datasets.base.BaseDataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">torchctr.datasets.base.BaseDataset</span></code></a></p>
+<dl class="method">
+<dt id="torchctr.datasets.avazu.Avazu.build_data">
+<code class="descname">build_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/datasets/avazu.html#Avazu.build_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.datasets.avazu.Avazu.build_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchctr.datasets.base">
+<span id="torchctr-datasets-base-module"></span><h2>torchctr.datasets.base module<a class="headerlink" href="#module-torchctr.datasets.base" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchctr.datasets.base.BaseDataset">
+<em class="property">class </em><code class="descclassname">torchctr.datasets.base.</code><code class="descname">BaseDataset</code><a class="reference internal" href="_modules/torchctr/datasets/base.html#BaseDataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.datasets.base.BaseDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.utils.data.dataset.Dataset</span></code></p>
+<dl class="method">
+<dt id="torchctr.datasets.base.BaseDataset.load_data">
+<code class="descname">load_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/datasets/base.html#BaseDataset.load_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.datasets.base.BaseDataset.load_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="torchctr.datasets.base.BaseDataset.preprocess_x">
+<code class="descname">preprocess_x</code><span class="sig-paren">(</span><em>non_categorical=[]</em>, <em>non_categorical_func=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/datasets/base.html#BaseDataset.preprocess_x"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.datasets.base.BaseDataset.preprocess_x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="torchctr.datasets.base.BaseDataset.preprocess_y">
+<code class="descname">preprocess_y</code><span class="sig-paren">(</span><em>y_func=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/datasets/base.html#BaseDataset.preprocess_y"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.datasets.base.BaseDataset.preprocess_y" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchctr.datasets.criteo">
+<span id="torchctr-datasets-criteo-module"></span><h2>torchctr.datasets.criteo module<a class="headerlink" href="#module-torchctr.datasets.criteo" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchctr.datasets.criteo.Criteo">
+<em class="property">class </em><code class="descclassname">torchctr.datasets.criteo.</code><code class="descname">Criteo</code><a class="reference internal" href="_modules/torchctr/datasets/criteo.html#Criteo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.datasets.criteo.Criteo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#torchctr.datasets.base.BaseDataset" title="torchctr.datasets.base.BaseDataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">torchctr.datasets.base.BaseDataset</span></code></a></p>
+<dl class="method">
+<dt id="torchctr.datasets.criteo.Criteo.load_data">
+<code class="descname">load_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/datasets/criteo.html#Criteo.load_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.datasets.criteo.Criteo.load_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchctr.datasets.movielens">
+<span id="torchctr-datasets-movielens-module"></span><h2>torchctr.datasets.movielens module<a class="headerlink" href="#module-torchctr.datasets.movielens" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchctr.datasets.movielens.MovieLens">
+<em class="property">class </em><code class="descclassname">torchctr.datasets.movielens.</code><code class="descname">MovieLens</code><a class="reference internal" href="_modules/torchctr/datasets/movielens.html#MovieLens"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.datasets.movielens.MovieLens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#torchctr.datasets.base.BaseDataset" title="torchctr.datasets.base.BaseDataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">torchctr.datasets.base.BaseDataset</span></code></a></p>
+<dl class="method">
+<dt id="torchctr.datasets.movielens.MovieLens.build_data">
+<code class="descname">build_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/datasets/movielens.html#MovieLens.build_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.datasets.movielens.MovieLens.build_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchctr.datasets.titanic">
+<span id="torchctr-datasets-titanic-module"></span><h2>torchctr.datasets.titanic module<a class="headerlink" href="#module-torchctr.datasets.titanic" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchctr.datasets.titanic.Titanic">
+<em class="property">class </em><code class="descclassname">torchctr.datasets.titanic.</code><code class="descname">Titanic</code><a class="reference internal" href="_modules/torchctr/datasets/titanic.html#Titanic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.datasets.titanic.Titanic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#torchctr.datasets.base.BaseDataset" title="torchctr.datasets.base.BaseDataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">torchctr.datasets.base.BaseDataset</span></code></a></p>
+<dl class="method">
+<dt id="torchctr.datasets.titanic.Titanic.build_data">
+<code class="descname">build_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/datasets/titanic.html#Titanic.build_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.datasets.titanic.Titanic.build_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchctr.datasets">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchctr.datasets" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchctr.datasets.MovieLens">
+<em class="property">class </em><code class="descclassname">torchctr.datasets.</code><code class="descname">MovieLens</code><a class="reference internal" href="_modules/torchctr/datasets/movielens.html#MovieLens"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.datasets.MovieLens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#torchctr.datasets.base.BaseDataset" title="torchctr.datasets.base.BaseDataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">torchctr.datasets.base.BaseDataset</span></code></a></p>
+<dl class="method">
+<dt id="torchctr.datasets.MovieLens.build_data">
+<code class="descname">build_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/datasets/movielens.html#MovieLens.build_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.datasets.MovieLens.build_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchctr.datasets.Titanic">
+<em class="property">class </em><code class="descclassname">torchctr.datasets.</code><code class="descname">Titanic</code><a class="reference internal" href="_modules/torchctr/datasets/titanic.html#Titanic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.datasets.Titanic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#torchctr.datasets.base.BaseDataset" title="torchctr.datasets.base.BaseDataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">torchctr.datasets.base.BaseDataset</span></code></a></p>
+<dl class="method">
+<dt id="torchctr.datasets.Titanic.build_data">
+<code class="descname">build_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/datasets/titanic.html#Titanic.build_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.datasets.Titanic.build_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchctr.datasets.Avazu">
+<em class="property">class </em><code class="descclassname">torchctr.datasets.</code><code class="descname">Avazu</code><a class="reference internal" href="_modules/torchctr/datasets/avazu.html#Avazu"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.datasets.Avazu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#torchctr.datasets.base.BaseDataset" title="torchctr.datasets.base.BaseDataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">torchctr.datasets.base.BaseDataset</span></code></a></p>
+<dl class="method">
+<dt id="torchctr.datasets.Avazu.build_data">
+<code class="descname">build_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/datasets/avazu.html#Avazu.build_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.datasets.Avazu.build_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, jinyang
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

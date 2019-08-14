@@ -1,0 +1,338 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>torchctr.dashboard package &mdash; TorchCTR  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> TorchCTR
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">torchctr.dashboard package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-torchctr.dashboard.dashboard">torchctr.dashboard.dashboard module</a></li>
+<li><a class="reference internal" href="#module-torchctr.dashboard.div_builder">torchctr.dashboard.div_builder module</a></li>
+<li><a class="reference internal" href="#module-torchctr.dashboard.metric_logger">torchctr.dashboard.metric_logger module</a></li>
+<li><a class="reference internal" href="#module-torchctr.dashboard">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TorchCTR</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>torchctr.dashboard package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/torchctr.dashboard.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="torchctr-dashboard-package">
+<h1>torchctr.dashboard package<a class="headerlink" href="#torchctr-dashboard-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-torchctr.dashboard.dashboard">
+<span id="torchctr-dashboard-dashboard-module"></span><h2>torchctr.dashboard.dashboard module<a class="headerlink" href="#module-torchctr.dashboard.dashboard" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchctr.dashboard.dashboard.Dashboard">
+<em class="property">class </em><code class="descclassname">torchctr.dashboard.dashboard.</code><code class="descname">Dashboard</code><span class="sig-paren">(</span><em>page_title=''</em>, <em>page_desc=''</em>, <em>host='0.0.0.0'</em>, <em>port=8080</em>, <em>debug=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/dashboard.html#Dashboard"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.dashboard.Dashboard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="torchctr.dashboard.dashboard.Dashboard.build_header">
+<code class="descname">build_header</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/dashboard.html#Dashboard.build_header"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.dashboard.Dashboard.build_header" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="torchctr.dashboard.dashboard.Dashboard.build_layout">
+<code class="descname">build_layout</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/dashboard.html#Dashboard.build_layout"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.dashboard.Dashboard.build_layout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="torchctr.dashboard.dashboard.Dashboard.build_routes">
+<code class="descname">build_routes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/dashboard.html#Dashboard.build_routes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.dashboard.Dashboard.build_routes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="torchctr.dashboard.dashboard.Dashboard.log">
+<code class="descname">log</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/dashboard.html#Dashboard.log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.dashboard.Dashboard.log" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="torchctr.dashboard.dashboard.Dashboard.ping">
+<code class="descname">ping</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/dashboard.html#Dashboard.ping"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.dashboard.Dashboard.ping" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="torchctr.dashboard.dashboard.Dashboard.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/dashboard.html#Dashboard.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.dashboard.Dashboard.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchctr.dashboard.div_builder">
+<span id="torchctr-dashboard-div-builder-module"></span><h2>torchctr.dashboard.div_builder module<a class="headerlink" href="#module-torchctr.dashboard.div_builder" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchctr.dashboard.div_builder.build_div">
+<code class="descclassname">torchctr.dashboard.div_builder.</code><code class="descname">build_div</code><span class="sig-paren">(</span><em>div</em>, <em>div_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/div_builder.html#build_div"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.div_builder.build_div" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchctr.dashboard.div_builder.build_graph">
+<code class="descclassname">torchctr.dashboard.div_builder.</code><code class="descname">build_graph</code><span class="sig-paren">(</span><em>data</em>, <em>title</em>, <em>div_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/div_builder.html#build_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.div_builder.build_graph" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchctr.dashboard.div_builder.div_build">
+<code class="descclassname">torchctr.dashboard.div_builder.</code><code class="descname">div_build</code><span class="sig-paren">(</span><em>json_data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/div_builder.html#div_build"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.div_builder.div_build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchctr.dashboard.div_builder.div_resize">
+<code class="descclassname">torchctr.dashboard.div_builder.</code><code class="descname">div_resize</code><span class="sig-paren">(</span><em>graphs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/div_builder.html#div_resize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.div_builder.div_resize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-torchctr.dashboard.metric_logger">
+<span id="torchctr-dashboard-metric-logger-module"></span><h2>torchctr.dashboard.metric_logger module<a class="headerlink" href="#module-torchctr.dashboard.metric_logger" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchctr.dashboard.metric_logger.MetricLogger">
+<em class="property">class </em><code class="descclassname">torchctr.dashboard.metric_logger.</code><code class="descname">MetricLogger</code><span class="sig-paren">(</span><em>name='2019-08-15 00:12:23.870546'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/metric_logger.html#MetricLogger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.metric_logger.MetricLogger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="torchctr.dashboard.metric_logger.MetricLogger.log">
+<code class="descname">log</code><span class="sig-paren">(</span><em>trace</em>, <em>stats</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/metric_logger.html#MetricLogger.log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.metric_logger.MetricLogger.log" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="torchctr.dashboard.metric_logger.MetricLogger.send">
+<code class="descname">send</code><span class="sig-paren">(</span><em>dashboard_address</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/metric_logger.html#MetricLogger.send"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.metric_logger.MetricLogger.send" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchctr.dashboard">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchctr.dashboard" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchctr.dashboard.MetricLogger">
+<em class="property">class </em><code class="descclassname">torchctr.dashboard.</code><code class="descname">MetricLogger</code><span class="sig-paren">(</span><em>name='2019-08-15 00:12:23.870546'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/metric_logger.html#MetricLogger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.MetricLogger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="torchctr.dashboard.MetricLogger.log">
+<code class="descname">log</code><span class="sig-paren">(</span><em>trace</em>, <em>stats</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/metric_logger.html#MetricLogger.log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.MetricLogger.log" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="torchctr.dashboard.MetricLogger.send">
+<code class="descname">send</code><span class="sig-paren">(</span><em>dashboard_address</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/metric_logger.html#MetricLogger.send"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.MetricLogger.send" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchctr.dashboard.Dashboard">
+<em class="property">class </em><code class="descclassname">torchctr.dashboard.</code><code class="descname">Dashboard</code><span class="sig-paren">(</span><em>page_title=''</em>, <em>page_desc=''</em>, <em>host='0.0.0.0'</em>, <em>port=8080</em>, <em>debug=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/dashboard.html#Dashboard"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.Dashboard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="torchctr.dashboard.Dashboard.build_header">
+<code class="descname">build_header</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/dashboard.html#Dashboard.build_header"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.Dashboard.build_header" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="torchctr.dashboard.Dashboard.build_layout">
+<code class="descname">build_layout</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/dashboard.html#Dashboard.build_layout"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.Dashboard.build_layout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="torchctr.dashboard.Dashboard.build_routes">
+<code class="descname">build_routes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/dashboard.html#Dashboard.build_routes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.Dashboard.build_routes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="torchctr.dashboard.Dashboard.log">
+<code class="descname">log</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/dashboard.html#Dashboard.log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.Dashboard.log" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="torchctr.dashboard.Dashboard.ping">
+<code class="descname">ping</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/dashboard.html#Dashboard.ping"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.Dashboard.ping" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="torchctr.dashboard.Dashboard.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/dashboard.html#Dashboard.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.Dashboard.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, jinyang
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
