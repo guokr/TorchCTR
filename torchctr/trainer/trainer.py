@@ -19,7 +19,7 @@ class Trainer:
     def build_param(self, param):
         print("| building parameters ...")
         default_param = {
-            "batch_size": 32,
+            "batch_size": 128,
             "num_workers": 4,
             "device": "cpu",
             "learning_rate": 0.01,

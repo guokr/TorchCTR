@@ -1,0 +1,5 @@
+Quickstart
+----------
+
+
+.. literalinclude:: ../../example.py

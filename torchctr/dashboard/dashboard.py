@@ -14,7 +14,7 @@ external_stylesheets = ["http://codepen.io/chriddyp/pen/bWLwgP.css"]
 
 class Dashboard:
     def __init__(
-        self, page_title="", page_desc="", host="0.0.0.0", port=8080, debug=True
+        self, page_title="Dashboard", page_desc="", host="0.0.0.0", port=8080, debug=False
     ):
         self.page_title = page_title
         self.page_desc = page_desc
