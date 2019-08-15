@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to TorchCTR’s documentation! &mdash; TorchCTR  documentation</title>
+  <title>Visulization &mdash; TorchCTR  documentation</title>
   
 
   
@@ -35,7 +35,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Getting Started" href="getting_started.html" /> 
+    <link rel="next" title="FAQ" href="FAQ.html" />
+    <link rel="prev" title="Models" href="prediction_models.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -49,7 +50,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> TorchCTR
+            <a href="index.html" class="icon icon-home"> TorchCTR
           
 
           
@@ -80,10 +81,10 @@
             
             
               <p class="caption"><span class="caption-text">User Guide</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prediction_models.html">Models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="visulization.html">Visulization</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Visulization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FAQ.html">FAQ</a></li>
 </ul>
 <p class="caption"><span class="caption-text">API Reference</span></p>
@@ -103,7 +104,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">TorchCTR</a>
+          <a href="index.html">TorchCTR</a>
         
       </nav>
 
@@ -132,15 +133,15 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="#">Docs</a> &raquo;</li>
+      <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Welcome to TorchCTR’s documentation!</li>
+      <li>Visulization</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/visulization.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -153,50 +154,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="welcome-to-torchctr-s-documentation">
-<h1>Welcome to TorchCTR’s documentation!<a class="headerlink" href="#welcome-to-torchctr-s-documentation" title="Permalink to this headline">¶</a></h1>
-<p>TorchCTR is a scalable and easy-to-use ML package for CTR (Click Through Rate) prediction and ranking in recommender system with Facebook PyTorch.</p>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="section" id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install torchctr --user
+  <div class="section" id="visulization">
+<h1>Visulization<a class="headerlink" href="#visulization" title="Permalink to this headline">¶</a></h1>
+<p>TorchCTR has a simple but enough dashboard for log and metrics visulization. This dashboard should be setup as a server.</p>
+<div class="literal-block-wrapper docutils container" id="server-py">
+<div class="code-block-caption"><span class="caption-text">Simple dashboard server <code class="docutils literal notranslate"><span class="pre">examples/server.py</span></code></span><a class="headerlink" href="#server-py" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1"># encoding: utf-8</span>
+
+<span class="kn">from</span> <span class="nn">torchctr.dashboard</span> <span class="k">import</span> <span class="n">Dashboard</span>
+
+<span class="c1"># Just init and run</span>
+<span class="c1"># Then the dashboard will run at 0.0.0.0:8080, sure you can modify them</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">Dashboard</span><span class="p">()</span>
+<span class="n">v</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="classic-models">
-<h2>Classic Models<a class="headerlink" href="#classic-models" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>[x] <a class="reference external" href="https://en.wikipedia.org/wiki/Logistic_regression">Logistic Regression</a></li>
-<li>[x] <a class="reference external" href="https://www.csie.ntu.edu.tw/~b97053/paper/Rendle2010FM.pdf">Factorization Machine by Osaka Univ.</a></li>
-<li>[x] <a class="reference external" href="https://www.csie.ntu.edu.tw/~cjlin/papers/ffm.pdf">Field-aware Factorization Machine by Criteo, CMU &amp; NTU</a></li>
-</ul>
+<p>You’ll get the prompt like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Serving</span> <span class="n">Flask</span> <span class="n">app</span> <span class="s2">&quot;torchctr.dashboard.dashboard&quot;</span> <span class="p">(</span><span class="n">lazy</span> <span class="n">loading</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">Environment</span><span class="p">:</span> <span class="n">production</span>
+  <span class="n">WARNING</span><span class="p">:</span> <span class="n">Do</span> <span class="ow">not</span> <span class="n">use</span> <span class="n">the</span> <span class="n">development</span> <span class="n">server</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">production</span> <span class="n">environment</span><span class="o">.</span>
+  <span class="n">Use</span> <span class="n">a</span> <span class="n">production</span> <span class="n">WSGI</span> <span class="n">server</span> <span class="n">instead</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">Debug</span> <span class="n">mode</span><span class="p">:</span> <span class="n">off</span>
+<span class="o">*</span> <span class="n">Running</span> <span class="n">on</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">8080</span><span class="o">/</span> <span class="p">(</span><span class="n">Press</span> <span class="n">CTRL</span><span class="o">+</span><span class="n">C</span> <span class="n">to</span> <span class="n">quit</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="section" id="deep-learning-models">
-<h2>Deep Learning Models<a class="headerlink" href="#deep-learning-models" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>[x] <a class="reference external" href="https://arxiv.org/abs/1606.07792">Wide and Deep by Google</a></li>
-<li>[x] <a class="reference external" href="https://arxiv.org/abs/1703.04247">DeepFM by Huawei &amp; HIT</a></li>
-<li>[x] <a class="reference external" href="https://arxiv.org/pdf/1708.05027.pdf">Neural Factorization Machine by NUS</a></li>
-<li>[x] <a class="reference external" href="https://arxiv.org/abs/1902.09096">Field-aware Neural Factorization Machine</a></li>
-<li>[ ] <a class="reference external" href="https://arxiv.org/abs/1601.02376">Factorization-supported Neural Network</a></li>
-<li>[ ] <a class="reference external" href="https://arxiv.org/abs/1611.00144">Product-based Neural Network</a></li>
-<li>[ ] <a class="reference external" href="https://arxiv.org/abs/1708.04617">Attentional Factorization Machine</a></li>
-<li>[ ] <a class="reference external" href="https://arxiv.org/abs/1708.05123">Deep and Cross Network</a></li>
-<li>[ ] <a class="reference external" href="https://arxiv.org/abs/1706.06978">Deep Interest Network</a></li>
-<li>[ ] <a class="reference external" href="https://arxiv.org/abs/1803.05170">eXtreme Deep Factorization Machine</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
-</ul>
 </div>
 
 
@@ -207,8 +190,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="getting_started.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="FAQ.html" class="btn btn-neutral float-right" title="FAQ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
+      
+        <a href="prediction_models.html" class="btn btn-neutral float-left" title="Models" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

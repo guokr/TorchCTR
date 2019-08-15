@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Models &mdash; TorchCTR  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Visulization" href="visulization.html" />
+    <link rel="prev" title="Getting Started" href="getting_started.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> TorchCTR
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#classic-models">Classic Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#logistic-regression">Logistic Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#factorization-machine">Factorization Machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#field-aware-factorization-machine">Field-aware Factorization Machine</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#deep-learning-models">Deep Learning Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#wide-and-deep-model">Wide and Deep Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deep-factorization-machine">Deep Factorization Machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#neural-factorization-machine">Neural Factorization Machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#field-aware-neural-factorization-machine">Field-aware Neural Factorization Machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#factorization-supported-neural-network">Factorization-supported Neural Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#product-based-neural-network">Product-based Neural Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#attentional-factorization-machine">Attentional Factorization Machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deep-and-cross-network">Deep and Cross Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deep-interest-network">Deep Interest Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extreme-deep-factorization-machine">eXtreme Deep Factorization Machine</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="visulization.html">Visulization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">FAQ</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">torchctr</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TorchCTR</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Models</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/prediction_models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="models">
+<h1>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="classic-models">
+<h2>Classic Models<a class="headerlink" href="#classic-models" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="logistic-regression">
+<h3>Logistic Regression<a class="headerlink" href="#logistic-regression" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><a class="reference external" href="https://en.wikipedia.org/wiki/Logistic_regression">Logistic Regression</a></p>
+</div>
+</div>
+<div class="section" id="factorization-machine">
+<h3>Factorization Machine<a class="headerlink" href="#factorization-machine" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><a class="reference external" href="https://www.csie.ntu.edu.tw/~b97053/paper/Rendle2010FM.pdf">Factorization Machine by Osaka Univ.</a></p>
+</div>
+</div>
+<div class="section" id="field-aware-factorization-machine">
+<h3>Field-aware Factorization Machine<a class="headerlink" href="#field-aware-factorization-machine" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><a class="reference external" href="https://www.csie.ntu.edu.tw/~cjlin/papers/ffm.pdf">Field-aware Factorization Machine by Criteo, CMU &amp; NTU</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="deep-learning-models">
+<h2>Deep Learning Models<a class="headerlink" href="#deep-learning-models" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="wide-and-deep-model">
+<h3>Wide and Deep Model<a class="headerlink" href="#wide-and-deep-model" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">[x] <a class="reference external" href="https://arxiv.org/abs/1606.07792">Wide and Deep by Google</a></p>
+</div>
+</div>
+<div class="section" id="deep-factorization-machine">
+<h3>Deep Factorization Machine<a class="headerlink" href="#deep-factorization-machine" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">[x] <a class="reference external" href="https://arxiv.org/abs/1703.04247">DeepFM by Huawei &amp; HIT</a></p>
+</div>
+</div>
+<div class="section" id="neural-factorization-machine">
+<h3>Neural Factorization Machine<a class="headerlink" href="#neural-factorization-machine" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">[x] <a class="reference external" href="https://arxiv.org/pdf/1708.05027.pdf">Neural Factorization Machine by NUS</a></p>
+</div>
+</div>
+<div class="section" id="field-aware-neural-factorization-machine">
+<h3>Field-aware Neural Factorization Machine<a class="headerlink" href="#field-aware-neural-factorization-machine" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">[x] <a class="reference external" href="https://arxiv.org/abs/1902.09096">Field-aware Neural Factorization Machine</a></p>
+</div>
+</div>
+<div class="section" id="factorization-supported-neural-network">
+<h3>Factorization-supported Neural Network<a class="headerlink" href="#factorization-supported-neural-network" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last"><a class="reference external" href="https://arxiv.org/abs/1601.02376">Factorization-supported Neural Network</a></p>
+</div>
+</div>
+<div class="section" id="product-based-neural-network">
+<h3>Product-based Neural Network<a class="headerlink" href="#product-based-neural-network" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-todo admonition" id="index-1">
+<p class="first admonition-title">Todo</p>
+<p class="last"><a class="reference external" href="https://arxiv.org/abs/1611.00144">Product-based Neural Network</a></p>
+</div>
+</div>
+<div class="section" id="attentional-factorization-machine">
+<h3>Attentional Factorization Machine<a class="headerlink" href="#attentional-factorization-machine" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-todo admonition" id="index-2">
+<p class="first admonition-title">Todo</p>
+<p class="last"><a class="reference external" href="https://arxiv.org/abs/1708.04617">Attentional Factorization Machine</a></p>
+</div>
+</div>
+<div class="section" id="deep-and-cross-network">
+<h3>Deep and Cross Network<a class="headerlink" href="#deep-and-cross-network" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-todo admonition" id="index-3">
+<p class="first admonition-title">Todo</p>
+<p class="last"><a class="reference external" href="https://arxiv.org/abs/1708.05123">Deep and Cross Network</a></p>
+</div>
+</div>
+<div class="section" id="deep-interest-network">
+<h3>Deep Interest Network<a class="headerlink" href="#deep-interest-network" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-todo admonition" id="index-4">
+<p class="first admonition-title">Todo</p>
+<p class="last"><a class="reference external" href="https://arxiv.org/abs/1706.06978">Deep Interest Network</a></p>
+</div>
+</div>
+<div class="section" id="extreme-deep-factorization-machine">
+<h3>eXtreme Deep Factorization Machine<a class="headerlink" href="#extreme-deep-factorization-machine" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-todo admonition" id="index-5">
+<p class="first admonition-title">Todo</p>
+<p class="last"><a class="reference external" href="https://arxiv.org/abs/1803.05170">eXtreme Deep Factorization Machine</a></p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="visulization.html" class="btn btn-neutral float-right" title="Visulization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="getting_started.html" class="btn btn-neutral float-left" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, jinyang
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

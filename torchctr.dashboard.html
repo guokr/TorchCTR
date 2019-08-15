@@ -34,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="torchctr.datasets package" href="torchctr.datasets.html" />
+    <link rel="prev" title="torchctr package" href="torchctr.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -78,18 +80,33 @@
               
             
             
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">torchctr.dashboard package</a><ul>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-torchctr.dashboard.dashboard">torchctr.dashboard.dashboard module</a></li>
-<li><a class="reference internal" href="#module-torchctr.dashboard.div_builder">torchctr.dashboard.div_builder module</a></li>
-<li><a class="reference internal" href="#module-torchctr.dashboard.metric_logger">torchctr.dashboard.metric_logger module</a></li>
-<li><a class="reference internal" href="#module-torchctr.dashboard">Module contents</a></li>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prediction_models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visulization.html">Visulization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">FAQ</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">torchctr</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="torchctr.html">torchctr package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="torchctr.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">torchctr.dashboard package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchctr.datasets.html">torchctr.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchctr.layers.html">torchctr.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchctr.models.html">torchctr.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchctr.progressbar.html">torchctr.progressbar package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchctr.trainer.html">torchctr.trainer package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="torchctr.html#module-torchctr">Module contents</a></li>
 </ul>
 </li>
 </ul>
-</div>
+</li>
+</ul>
+
             
           
         </div>
@@ -133,6 +150,10 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
+          <li><a href="modules.html">torchctr</a> &raquo;</li>
+        
+          <li><a href="torchctr.html">torchctr package</a> &raquo;</li>
+        
       <li>torchctr.dashboard package</li>
     
     
@@ -161,7 +182,7 @@
 <span id="torchctr-dashboard-dashboard-module"></span><h2>torchctr.dashboard.dashboard module<a class="headerlink" href="#module-torchctr.dashboard.dashboard" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="torchctr.dashboard.dashboard.Dashboard">
-<em class="property">class </em><code class="descclassname">torchctr.dashboard.dashboard.</code><code class="descname">Dashboard</code><span class="sig-paren">(</span><em>page_title=''</em>, <em>page_desc=''</em>, <em>host='0.0.0.0'</em>, <em>port=8080</em>, <em>debug=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/dashboard.html#Dashboard"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.dashboard.Dashboard" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">torchctr.dashboard.dashboard.</code><code class="descname">Dashboard</code><span class="sig-paren">(</span><em>page_title='Dashboard'</em>, <em>page_desc=''</em>, <em>host='0.0.0.0'</em>, <em>port=8080</em>, <em>debug=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/dashboard.html#Dashboard"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.dashboard.Dashboard" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <dl class="method">
 <dt id="torchctr.dashboard.dashboard.Dashboard.build_header">
@@ -223,7 +244,7 @@
 <span id="torchctr-dashboard-metric-logger-module"></span><h2>torchctr.dashboard.metric_logger module<a class="headerlink" href="#module-torchctr.dashboard.metric_logger" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="torchctr.dashboard.metric_logger.MetricLogger">
-<em class="property">class </em><code class="descclassname">torchctr.dashboard.metric_logger.</code><code class="descname">MetricLogger</code><span class="sig-paren">(</span><em>name='2019-08-15 00:12:23.870546'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/metric_logger.html#MetricLogger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.metric_logger.MetricLogger" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">torchctr.dashboard.metric_logger.</code><code class="descname">MetricLogger</code><span class="sig-paren">(</span><em>name='2019-08-15 18:12:31.153297'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/metric_logger.html#MetricLogger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.metric_logger.MetricLogger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <dl class="method">
 <dt id="torchctr.dashboard.metric_logger.MetricLogger.log">
@@ -242,7 +263,7 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchctr.dashboard" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="torchctr.dashboard.MetricLogger">
-<em class="property">class </em><code class="descclassname">torchctr.dashboard.</code><code class="descname">MetricLogger</code><span class="sig-paren">(</span><em>name='2019-08-15 00:12:23.870546'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/metric_logger.html#MetricLogger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.MetricLogger" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">torchctr.dashboard.</code><code class="descname">MetricLogger</code><span class="sig-paren">(</span><em>name='2019-08-15 18:12:31.153297'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/metric_logger.html#MetricLogger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.MetricLogger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <dl class="method">
 <dt id="torchctr.dashboard.MetricLogger.log">
@@ -258,7 +279,7 @@
 
 <dl class="class">
 <dt id="torchctr.dashboard.Dashboard">
-<em class="property">class </em><code class="descclassname">torchctr.dashboard.</code><code class="descname">Dashboard</code><span class="sig-paren">(</span><em>page_title=''</em>, <em>page_desc=''</em>, <em>host='0.0.0.0'</em>, <em>port=8080</em>, <em>debug=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/dashboard.html#Dashboard"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.Dashboard" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">torchctr.dashboard.</code><code class="descname">Dashboard</code><span class="sig-paren">(</span><em>page_title='Dashboard'</em>, <em>page_desc=''</em>, <em>host='0.0.0.0'</em>, <em>port=8080</em>, <em>debug=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torchctr/dashboard/dashboard.html#Dashboard"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torchctr.dashboard.Dashboard" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <dl class="method">
 <dt id="torchctr.dashboard.Dashboard.build_header">
@@ -300,6 +321,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="torchctr.datasets.html" class="btn btn-neutral float-right" title="torchctr.datasets package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="torchctr.html" class="btn btn-neutral float-left" title="torchctr package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
