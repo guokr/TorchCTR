@@ -50,5 +50,5 @@ please check exmaples/
 
 <h2 align="center">Documentation</h2>
 
-Comming soon
+[Official Documentation](https://guokr.github.io/TorchCTR/)
 
