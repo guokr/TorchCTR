@@ -16,7 +16,7 @@ model = FactorizationMachine(feature_dims=dataset.feature_dims)
 trainer = Trainer(model, dataset)
 
 # At last we train it
-trainer.train()
+trainer.train(auto_save=True)
 
 # save the model to local disk
-trainer.save_model("checkpoints/test.pt")
+# trainer.save_model("checkpoints/test.pt")

@@ -73,8 +73,10 @@ class Trainer:
 
         return trainer_setup
 
-    def train(self, dashboard_address=None):
+    def train(self, auto_save=True, save_by=None, dashboard_address=None):
         dashboard_status = False
+        if save_by is None:
+            save_by = self.param.get("metrics")[0]
 
         if dashboard_address is None:
             print("| Didn't find dashboard")
@@ -92,6 +94,10 @@ class Trainer:
             self.valid_step()
             if dashboard_status is True:
                 self.trainer_setup.get("logger").send(dashboard_address)
+            if auto_save==True and self.trainer_setup.get("logger").check_best(by=save_by):
+                self.save_model("checkpoints/test_{}.pt".format(e+1))
+
+
 
     def train_step(self, epoch):
         self.model.train()

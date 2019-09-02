@@ -1,3 +1,7 @@
 torch
 numpy
 tqdm
+sklearn
+flask
+dash
+dash-daq

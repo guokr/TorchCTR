@@ -17,3 +17,10 @@ class MetricLogger:
 
     def send(self, dashboard_address):
         requests.post(url="http://{}/log".format(dashboard_address), json={"logs": self.logs, "logger": self.name})
+
+    def check_best(self, by):
+        if max(self.logs[by]["validation"]) == self.logs[by]["validation"][-1]:
+            return True
+        else:
+            return False
+

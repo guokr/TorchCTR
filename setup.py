@@ -9,7 +9,7 @@ with open("requirements.txt", "r") as f:
 
 setup(
     name="TorchCTR",
-    version="0.1",
+    version="0.2",
     description="CTR in PyTorch",
     # long_description=readme,
     author='Guokr Inc.',

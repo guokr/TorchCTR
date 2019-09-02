@@ -9,8 +9,8 @@ from torchctr.models import FieldAwareNeuralFactorizationMachine, DeepFactorizat
 from torchctr.trainer import Trainer
 
 # dataset = MovieLens()
-# dataset = Avazu()
-dataset = Titanic()
+dataset = Avazu()
+# dataset = Titanic()
 dataset.build_data()
 
 dims = dataset.feature_dims
@@ -25,7 +25,7 @@ model = FactorizationMachine(feature_dims=dims)
 # model = FieldAwareNeuralFactorizationMachine(dims, embed_dim=4, hidden_dims=[10, 10, 10])
 
 hyper_parameters = {
-    "batch_size": 128,
+    "batch_size": 32,
     "device": "cpu",
     "learning_rate": 0.01,
     "weight_decay": 1e-6,
@@ -35,4 +35,4 @@ hyper_parameters = {
 
 trainer = Trainer(model, dataset, hyper_parameters)
 trainer.train(dashboard_address="localhost:8081")
-trainer.save_model("checkpoints/test.pt")
+# trainer.save_model("checkpoints/test.pt")
