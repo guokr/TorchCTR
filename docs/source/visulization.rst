@@ -18,3 +18,12 @@ You'll get the prompt like this:
      Use a production WSGI server instead.
    * Debug mode: off
    * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+
+Back to the training part, and tell trainer the server address:
+
+.. code-block:: python
+
+   trainer = Trainer(model, dataset)
+   trainer.train(dashboard_address="localhost:8080")
+
+Then trainer will send all the metrics to the server for visulization, sure you can check them in your browser.

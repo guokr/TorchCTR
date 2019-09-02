@@ -16,9 +16,9 @@ class Trainer:
         self.param = self.build_param(param)
         self.trainer_setup = self.build_trainer()
 
-    def build_param(self, param):
+    def build_param(self, params):
         print("| building parameters ...")
-        default_param = {
+        default_params = {
             "batch_size": 128,
             "num_workers": 4,
             "device": "cpu",
@@ -28,11 +28,11 @@ class Trainer:
             "metrics": ["auc"],
         }
 
-        for k, v in param.items():
-            if k in default_param:
-                default_param[k] = v
+        for k, v in params.items():
+            if k in default_params:
+                default_params[k] = v
 
-        return default_param
+        return default_params
 
     def build_trainer(self):
         print("| building trainer ...")

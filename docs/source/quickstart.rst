@@ -1,5 +1,0 @@
-Quickstart
-----------
-
-
-.. literalinclude:: ../../example.py
